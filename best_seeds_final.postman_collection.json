@@ -1,0 +1,3584 @@
+{
+	"info": {
+		"_postman_id": "b06f164e-4ac9-4605-8039-f2a2bb787640",
+		"name": "best_seeds_final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43988372",
+		"_collection_link": "https://nabeelafatima.postman.co/workspace/Nabeela-Fatima's-Workspace~d13798fe-0ef7-41af-8e54-d6f7293e8402/collection/43988372-b06f164e-4ac9-4605-8039-f2a2bb787640?action=share&source=collection_link&creator=43988372"
+	},
+	"item": [
+		{
+			"name": "User_apis",
+			"item": [
+				{
+					"name": "login (send OTP)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"mobile\": \"9700912007\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/login",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"mobile\": \"9700912007\",\r\n  \"otp_code\": \"564382\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/verify-otp",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"mobile\": \"9700912007\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/resend-otp",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"resend-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "nabeela",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "fatima",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/vehicle_image.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/update-profile",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile (after login)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/profile",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "58|mNj4vTVOUCzP4KpwCa9cVtl5p7l8cZMj1trGKDq631db6d07",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "58|mNj4vTVOUCzP4KpwCa9cVtl5p7l8cZMj1trGKDq631db6d07",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/logout",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book a Vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_number\": \"TS09AB1234\",\r\n    \"hatchery_name\": \"My Test Hatchery\",\r\n    \"name\": \"Nabbu\",\r\n    \"mobile\": \"9700912007\",\r\n    \"date\": \"2025-10-12\",\r\n    \"pickup_address\": \"Theni, Tamil Nadu\",\r\n    \"delivery_address\": \"Madurai, Tamil Nadu\",\r\n    \"seed_quantity\": 50\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/book-vehicle",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"book-vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vehicles_fetching",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/vehicles/15",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"vehicles",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "home screen banners",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/banner",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Promotional Banners",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/promo",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"promo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wanted Banners",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/wanted",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"wanted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updates Banners",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/updates",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"updates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "News Banners",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/news",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spot-hatcheries-banner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/spot-hatcheries-banner",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"spot-hatcheries-banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hatcheryBanners",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/hatcheryBanners/10",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"hatcheryBanners",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wantedCrops_fetching",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59|eewRguqKQy2qWyzFlsaTNGcnqTgygGtih7Nr8eFvb0e7d0a6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/wanted-crops",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"wanted-crops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"location_name\": \"Karimnagar\",\r\n  \"longitude\": 79.1288,\r\n  \"latitude\": 18.4386,\r\n  \"farmer_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations_farmer",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations_farmer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"location_name\": \"Chennai\",\r\n  \"longitude\": 80.27071800,\r\n  \"latitude\": 13.08268000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations/22",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Locations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations/search?keyword=hy",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "hy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Location History",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations/history/2",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations",
+								"history",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Locations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations/all",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Default Location (Farmer’s Last Added One)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations/default/2",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations",
+								"default",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Default Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"farmer_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations/set-default/22",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations",
+								"set-default",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "home_filtres",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/hatcheries_filters?category_id=4&location_id=3",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"hatcheries_filters"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "4"
+								},
+								{
+									"key": "location_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "home_filtres multi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/hatcheries_filters?category_id[]=4&category_id[]=5&location_id[]=3&location_id[]=4",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"hatcheries_filters"
+							],
+							"query": [
+								{
+									"key": "category_id[]",
+									"value": "4"
+								},
+								{
+									"key": "category_id[]",
+									"value": "5"
+								},
+								{
+									"key": "location_id[]",
+									"value": "3"
+								},
+								{
+									"key": "location_id[]",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categories_fetching",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/categories",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "locations_fetching",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/locations",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "brands_fetching",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "64|7aMnqghjmggeToeczlS0cX4bdF6K2RjnFqUZct51184bff01",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/brands",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSeedPrices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/prices?category_id=4&location_id=10",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"prices"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "4"
+								},
+								{
+									"key": "location_id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "broodstocks_index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/broodstocks?category_id=4&location_id=20",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"broodstocks"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "4"
+								},
+								{
+									"key": "location_id",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "broodstocks_filtre",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/broodstocks_list?search=Ocean&category=shrimp&year=2025&month=October",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"broodstocks_list"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Ocean"
+								},
+								{
+									"key": "category",
+									"value": "shrimp"
+								},
+								{
+									"key": "year",
+									"value": "2025"
+								},
+								{
+									"key": "month",
+									"value": "October"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "homeNews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/home-news",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"home-news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "newsAdsList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/news-ads-list",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"news-ads-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trendingNews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/trending-news",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"trending-news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trendingNewsShow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/trending-news/22",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"trending-news",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medicineNews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/medicine-news",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"medicine-news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medicineNewsShow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/medicine-news/22",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"medicine-news",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "climateNews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/climate-news",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"climate-news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "climateNewsShow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/climate-news/22",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"climate-news",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "home screen news",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/home-news?category_id=2&location_id=4",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"home-news"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "2"
+								},
+								{
+									"key": "location_id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All News of Specific Type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/news?type=medicine news",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"news"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "medicine news"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single News Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/news/9?type=climate news",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"news",
+								"9"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "climate news"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "65|KdtKe2eIs9HJJXXoeDtglByIA8UF0I5cLsXPSK2k2b463837",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/farmer/my-bookings",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"farmer",
+								"my-bookings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendors_apis",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "18|UygjhWFWIfwqHsnUrj93000qSEuDd68cdeCIPZt4c2f7ef46",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"best_seeds_id\": \"BS202505\",\r\n    \"password\": \"hatchery123\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/login",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/profile",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "rohit_Hatchery",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "+919912321122",
+									"type": "text"
+								},
+								{
+									"key": "alternate_mobile",
+									"value": "+919989220856",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "madhapur, Hyderabad",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "500032",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/update-profile",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/logout",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Hatchery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hatchery_name",
+									"value": "My Test Hatchery",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Fish,Shrimp,tiger",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "hyderabad",
+									"type": "text"
+								},
+								{
+									"key": "opening_time",
+									"value": "08:00",
+									"type": "text"
+								},
+								{
+									"key": "closing_time",
+									"value": "17:00",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Best Hatchery",
+									"type": "text"
+								},
+								{
+									"key": "hatchery_images[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg",
+										"/C:/Users/ADMIN/Downloads/sample_1280×853.jpeg",
+										"/C:/Users/ADMIN/Downloads/vehicle_image.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/hatcheries",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"hatcheries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myHatcheries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vendor/hatcheries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendor",
+								"hatcheries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myHatcheries Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/hatcheries",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"hatcheries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Hatchery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hatchery_name",
+									"value": "My Test Hatchery",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Fish,Shrimp,tiger",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "goa",
+									"type": "text"
+								},
+								{
+									"key": "opening_time",
+									"value": "07:30",
+									"type": "text"
+								},
+								{
+									"key": "closing_time",
+									"value": "18:00",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "best hatchery",
+									"type": "text"
+								},
+								{
+									"key": "hatchery_images[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg",
+										"/C:/Users/ADMIN/Downloads/sample_1280×853.jpeg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/hatcheries/28",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"hatcheries",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteHatchery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/hatcheries/27",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"hatcheries",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Seed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hatchery_id",
+									"value": "28",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "Fish, vannamei, tiger",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Premium fish seeds",
+									"type": "text"
+								},
+								{
+									"key": "locations[]",
+									"value": "goa,chennai,hyderabad",
+									"type": "text"
+								},
+								{
+									"key": "broad_stock",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "stock_available_date",
+									"value": "2025-09-28",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "50.00",
+									"type": "text"
+								},
+								{
+									"key": "seed_images[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/ADMIN/Downloads/sample_1280×853.jpeg",
+										"/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg"
+									]
+								},
+								{
+									"key": "seed_videos[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/266770_tiny.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/seeds",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"seeds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Seed Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "37|yZVYy4t9UC62o2U7Yjs7D1Fm5dPlV25M7DdM5ntN1179013e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "37|yZVYy4t9UC62o2U7Yjs7D1Fm5dPlV25M7DdM5ntN1179013e",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hatchery_id",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "Fish, vannamei, tiger",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Premium fish seeds",
+									"type": "text"
+								},
+								{
+									"key": "locations[]",
+									"value": "chennai",
+									"type": "text"
+								},
+								{
+									"key": "broad_stock",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "stock_available_date",
+									"value": "2025-09-28",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "50.00",
+									"type": "text"
+								},
+								{
+									"key": "seed_images[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg",
+										"/C:/Users/ADMIN/Downloads/sample_1280×853.jpeg"
+									]
+								},
+								{
+									"key": "seed_videos[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/266770_tiny.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/seeds",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"seeds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Seeds",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/seeds",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"seeds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Single Seed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/seeds/35",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"seeds",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Seed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hatchery_id",
+									"value": "28",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "Shrimp,vannamei,tiger,prawns",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Premium fish seeds",
+									"type": "text"
+								},
+								{
+									"key": "locations[]",
+									"value": "kerala, tamil nadu",
+									"type": "text"
+								},
+								{
+									"key": "broad_stock",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "stock_available_date",
+									"value": "2025-10-01",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "55.00",
+									"type": "text"
+								},
+								{
+									"key": "seed_images[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/sample_1280×853.jpeg"
+								},
+								{
+									"key": "seed_videos[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/266770_tiny.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/seeds/35",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"seeds",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Seed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/seeds/26",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"seeds",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "the Dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/dashboard/summary",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"dashboard",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all updates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/updates",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"updates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create update (upload image/video)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "caption",
+									"value": "My first hatchery update",
+									"type": "text"
+								},
+								{
+									"key": "hashtags[]",
+									"value": "aquaculture",
+									"type": "text"
+								},
+								{
+									"key": "hashtags[]",
+									"value": "shrimp",
+									"type": "text"
+								},
+								{
+									"key": "media_files[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg",
+										"/C:/Users/ADMIN/Downloads/sample_640×426.jpeg"
+									]
+								},
+								{
+									"key": "media_files[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/266770_tiny.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/updates",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"updates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show single update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/updates/10",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"updates",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/updates/10",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"updates",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List broodstocks (index)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/broodstocks",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"broodstocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new broodstock (store)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hatchery_name",
+									"value": "My Test Hatchery",
+									"type": "text"
+								},
+								{
+									"key": "category[]",
+									"value": "shrimp,fish,tiger",
+									"type": "text"
+								},
+								{
+									"key": "category[]",
+									"value": "fish",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "hyderabad",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "available_date",
+									"value": "2025-10-01",
+									"type": "text"
+								},
+								{
+									"key": "packing_date",
+									"value": "2025-10-02",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/sample_1280×853.jpeg"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/broodstocks",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"broodstocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View single broodstock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/broodstocks/7",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"broodstocks",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete broodstock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/broodstocks/7",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"broodstocks",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/vehicles",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new vehicle booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer_id",
+									"value": "CUST123",
+									"type": "text"
+								},
+								{
+									"key": "customer_name",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "customer_mobile",
+									"value": "9876543210",
+									"type": "text"
+								},
+								{
+									"key": "delivery_location",
+									"value": "Hyderabad",
+									"type": "text"
+								},
+								{
+									"key": "hatchery_name",
+									"value": "My Test Hatchery",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "Prawn,fish,tiger",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "Fish",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "count",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "driver_name",
+									"value": "Rahul",
+									"type": "text"
+								},
+								{
+									"key": "driver_mobile",
+									"value": "9876543211",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_number",
+									"value": "TS09AB1234",
+									"type": "text"
+								},
+								{
+									"key": "customer_id ",
+									"value": "CUST123",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_started_date",
+									"value": "2025-09-27",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_images[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/sample_640×426.jpeg"
+								},
+								{
+									"key": "vehicle_images[]",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/1mb-jpg-example-file.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/vehicles",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show single booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/vehicles/14",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"vehicles",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/vehicles/13",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"vehicles",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification Settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "53|7JHKj2DWUVSjZaDlZNkRoTLtW3xk8vxbOK8YlDN6f512e9c8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/notifications",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notification Settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "34|Krp8e0NNkNx0VmdPIjpFItcR5IzZ2svrjd0MHtCfdeeb11c8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "34|Krp8e0NNkNx0VmdPIjpFItcR5IzZ2svrjd0MHtCfdeeb11c8",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"seed_updates\": false,\r\n  \"hatchery_updates\": true,\r\n  \"broodstock_updates\": false,\r\n  \"vehicle_updates\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://aliceblue-wallaby-326294.hostingersite.com/api/vendor/notifications",
+							"protocol": "https",
+							"host": [
+								"aliceblue-wallaby-326294",
+								"hostingersite",
+								"com"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
